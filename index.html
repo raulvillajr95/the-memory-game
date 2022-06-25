@@ -5,10 +5,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <script src="scripts.js"></script>
+  <script src="scripts.js" defer></script>
   <title>The Memory Game</title>
 </head>
 <body>
-  
+  <div class="container">
+    <div class="top-left"></div>
+    <div class="top-center"></div>
+    <div class="top-right"></div>
+    <div class="bottom-left"></div>
+    <div class="bottom-center"></div>
+    <div class="bottom-right"></div>
+  </div>
+  <div class="buttons">
+    <button class="start">Start</button>
+    <button class="reset">Reset</button>
+  </div>
 </body>
 </html>
+
+<!-- 
+-see wassup with setTimeout() and randoms
+
+-easy game, light up 1 box(0.5 seconds) and guess it right
+rules:
+press button to start
+1 random box lights up for 0.5 seconds, then disappears
+you have 10 seconds to press the box the lit up
+  if the right box is pressed
+    the box is green, game done
+    press button to restart
+  if the wrong box is pressed
+    the box is red, game done
+    press button to restart
+-medium game, light up 2 boxes(0.4 seconds each)
+boxes light up one at a time
+-hard game, light up 5 boxes(0.25 seconds each)
+ -->
