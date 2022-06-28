@@ -19,18 +19,28 @@
   </div>
   <div class="buttons">
     <button class="start">Start</button>
-    <button class="reset">Reset</button>
+    <div>
+      <label for="difficulty">Difficulty:</label>
+      <select name="difficulty" id="difficulty">
+        <option value="easy">easy</option>
+        <option value="medium">medium</option>
+        <option value="hard">hard</option>
+      </select>
+      <button class="confirm" type="submit">Confirm</button>
+    </div>
   </div>
 </body>
 </html>
 
 <!-- 
--see wassup with setTimeout() and randoms
+start by changing base colors when I change difficulties
 
 -easy game, light up 1 box(0.5 seconds) and guess it right
+-medium game, light up 2 boxes(0.5 seconds each) grey boxes
+boxes light up one at a time
 rules:
 press button to start
-1 random box lights up for 0.5 seconds, then disappears
+2 random box lights up for 0.5 seconds, then disappears
 you have 10 seconds to press the box the lit up
   if the right box is pressed
     the box is green, game done
@@ -38,7 +48,5 @@ you have 10 seconds to press the box the lit up
   if the wrong box is pressed
     the box is red, game done
     press button to restart
--medium game, light up 2 boxes(0.4 seconds each)
-boxes light up one at a time
--hard game, light up 5 boxes(0.25 seconds each)
+-hard game, light up 5 boxes(0.3 seconds each) slate color boxes
  -->

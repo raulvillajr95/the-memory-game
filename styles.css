@@ -39,7 +39,10 @@ button:hover {
   background-color: #f3f3f3;
   border-radius: 0.25rem;
 }
-.buttons .reset {
+.buttons label {
+  color: #f3f3f3;
+}
+.buttons select {
   width: 5rem;
   height: 2rem;
   border-style: none;
