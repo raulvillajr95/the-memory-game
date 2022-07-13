@@ -1,1 +1,57 @@
-.buttons,.container{width:30rem;display:flex}.buttons,.container,body{display:flex}body{justify-content:center;align-items:center;height:100vh;flex-direction:column;background-color:#141414}.container{height:20rem;flex-wrap:wrap}.container div{height:10rem;width:10rem;border:.5rem solid #141414;box-sizing:border-box;background-color:#d3d3d3;border-radius:1rem}.buttons .start,.buttons select{width:5rem;height:2rem;border-style:none;border-radius:.25rem}.container div:active{background:rgba(0,0,0,.5)}.buttons{height:5rem;justify-content:space-around;align-items:center}button:hover{cursor:pointer}.buttons .start{background-color:#f3f3f3}.buttons label{color:#f3f3f3}.buttons select{background-color:#0275d8;color:#f3f3f3}
+.buttons,
+.container {
+  width: 30rem;
+  display: flex;
+}
+.buttons,
+.container,
+body {
+  display: flex;
+}
+body {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #141414;
+}
+.container {
+  height: 20rem;
+  flex-wrap: wrap;
+}
+.container div {
+  height: 10rem;
+  width: 10rem;
+  border: 0.5rem solid #141414;
+  box-sizing: border-box;
+  background-color: #d3d3d3;
+  border-radius: 1rem;
+}
+.buttons .start,
+.buttons select {
+  width: 5rem;
+  height: 2rem;
+  border-style: none;
+  border-radius: 0.25rem;
+}
+.container div:active {
+  background: rgba(0, 0, 0, 0.5);
+}
+.buttons {
+  height: 5rem;
+  justify-content: space-around;
+  align-items: center;
+}
+button:hover {
+  cursor: pointer;
+}
+.buttons .start {
+  background-color: #f3f3f3;
+}
+.buttons label {
+  color: #f3f3f3;
+}
+.buttons select {
+  background-color: #0275d8;
+  color: #f3f3f3;
+}
