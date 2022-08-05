@@ -44,14 +44,10 @@ table {
 }
 
 /* My CSS */
-.buttons,
-.container {
+.buttons, .container {
   width: 30rem;
-  display: flex;
 }
-.buttons,
-.container,
-body {
+.buttons, .container, body {
   display: flex;
 }
 body {
@@ -109,4 +105,95 @@ button:hover {
 }
 .doodledee-logo {
   width: 3rem;
+}
+
+/* Tablet */
+@media only screen and (max-width: 70em) {
+  .logo-img {
+    width: 26rem;
+  }
+  .container {
+    height: 20rem;
+    width: 30rem;
+  }
+  .container div {
+    border-radius: 1.5rem;
+    height: 10rem;
+    width: 10rem;
+  }
+  .buttons {
+    width: 25rem;
+  }
+  .buttons .start, .buttons select, .buttons .confirm {
+    border-radius: 0.35rem;
+    width: 6rem;
+    height: 2rem;
+  }
+  .buttons label {
+    color: #f3f3f3;
+  }
+  .buttons select {
+    text-align: center;
+  }
+  .doodledee-logo {
+    margin-top: 5rem;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 38em) {
+  .logo-img {
+    width: 21rem;
+  }
+  .container {
+    height: 14rem;
+    width: 21rem;
+  }
+  .container div {
+    height: 7rem;
+    width: 7rem;
+    border-radius: 1rem;
+  }
+  .buttons {
+    width: 21rem;
+  }
+  .buttons .start, .buttons select, .buttons .confirm {
+    width: 5rem;
+    border-radius: 0.25rem;
+  }
+  .buttons .confirm {
+    border-style: none;
+  }
+  .doodledee-logo {
+    margin-top: 3rem;
+  }
+}
+
+/* Small Mobile */
+@media only screen and (max-width: 20em) {
+  .logo-img {
+    width: 8rem;
+    margin-top: 0rem;
+  }
+  .container {
+    height: 12rem;
+    width: 18rem;
+  }
+  .container div {
+    height: 6rem;
+    width: 6rem;
+  }
+  .buttons {
+    width: 16rem;
+    margin-top: 0rem;
+    height: 3.5rem;
+  }
+  .buttons .start, .buttons select, .buttons .confirm {
+    font-size: 0.6rem;
+    width: 3.2rem;
+    height: 1.75rem;
+  }
+  .doodledee-logo {
+    margin-top: 0rem;
+  }
 }
