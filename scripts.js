@@ -8,9 +8,15 @@ const startBtn = document.querySelector(".start"),
   bottomRight = document.querySelector(".bottom-right"),
   allDivs = document.querySelectorAll(".container div"),
   spaces = [topLeft, topCenter, topRight, bottomLeft, bottomCenter, bottomRight];
+
 function randomNum(a) {
   return Math.floor(Math.random() * a) + 1;
 }
+
+let flipSound = new Audio('sounds/flip.wav')
+let loseSound = new Audio('sounds/lose.wav')
+let winSound = new Audio('sounds/win.wav')
+
 let difficultyLevel = "easy",
   started = !1,
   baseColor = "lightgrey",
@@ -20,10 +26,14 @@ function pickNumber() {
 }
 function singularTile(a) {
   pickNumber(),
-    (randomSpace.style.backgroundColor = "#f0ad4e"),
-    hitList.push(randomSpace),
+    randomSpace.style.backgroundColor = "#f0ad4e"
+    flipSound.currentTime = 0.318
+    flipSound.play();
+    hitList.push(randomSpace)
     setTimeout(() => {
       randomSpace.style.backgroundColor = baseColor;
+      flipSound.pause();
+      flipSound.currentTime = 0;
     }, a);
 }
 let hitList = [];
@@ -63,6 +73,7 @@ for (let i = 0; i < spaces.length; i++)
     if ((tapList.push(spaces[i]), "easy" == difficultyLevel))
       !0 == started && randomSpace.classList.value == spaces[i].classList.value
         ? (changeColor("green"),
+          winSound.play(),
           setTimeout(() => {
             changeColor(baseColor);
           }, 1e3),
@@ -70,6 +81,7 @@ for (let i = 0; i < spaces.length; i++)
         : !0 == started &&
           randomSpace.classList.value != spaces[i].classList.value &&
           (changeColor("red"),
+          loseSound.play(),
           setTimeout(() => {
             changeColor(baseColor);
           }, 1e3),
@@ -79,6 +91,7 @@ for (let i = 0; i < spaces.length; i++)
       !0 == started &&
         a[a.length - 1] != tapList[tapList.length - 1] &&
         (changeColor("red"),
+        loseSound.play(),
         setTimeout(() => {
           changeColor(baseColor);
         }, 1e3),
@@ -86,6 +99,7 @@ for (let i = 0; i < spaces.length; i++)
         !0 == started &&
           hitList.length == tapList.length &&
           (changeColor("green"),
+          winSound.play(),
           setTimeout(() => {
             changeColor(baseColor);
           }, 1e3),
