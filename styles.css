@@ -1,5 +1,3 @@
-
-
 /* My CSS */
 .buttons, .container {
   width: 30rem;
@@ -12,11 +10,16 @@ body {
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background-color: grey;
+  background-color: #f3f3f3;
   font-family: Arial, Helvetica, sans-serif;
 }
 .logo-img {
   width: 21rem;
+  height: 21rem;
+
+  background-image: url(images/847C0F61-61EF-4BEE-BD42-21B47F854D35.PNG);
+  background-size: cover;
+  background-position: center;
 }
 .container {
   height: 14rem;
@@ -26,7 +29,7 @@ body {
 .container div {
   height: 7rem;
   width: 7rem;
-  border: 0.5rem solid #141414;
+  border: 0.5rem solid #f3f3f3;
   box-sizing: border-box;
   background-color: #d3d3d3;
   border-radius: 1rem;
@@ -51,23 +54,31 @@ button:hover {
   cursor: pointer;
 }
 .buttons .start {
-  background-color: #f3f3f3;
+  background-color: #141414;
+  color: #f3f3f3;
 }
 .buttons label {
-  color: #f3f3f3;
+  color: #141414;
 }
 .buttons select {
   background-color: #0275d8;
   color: #f3f3f3;
 }
+.buttons .confirm {
+  border-style: none;
+  background-color: #141414;
+  color: #f3f3f3;
+}
 .doodledee-logo {
   width: 3rem;
+  border-radius: 50%;
 }
 
 /* Tablet */
 @media only screen and (max-width: 70em) {
   .logo-img {
     width: 26rem;
+    height: 26rem;
   }
   .container {
     height: 20rem;
@@ -98,6 +109,7 @@ button:hover {
 @media only screen and (max-width: 38em) {
   .logo-img {
     width: 21rem;
+    height: 21rem;
   }
   .container {
     height: 14rem;
@@ -115,9 +127,6 @@ button:hover {
     width: 5rem;
     border-radius: 0.25rem;
   }
-  .buttons .confirm {
-    border-style: none;
-  }
   .doodledee-logo {
     margin-top: 3rem;
   }
@@ -127,6 +136,7 @@ button:hover {
 @media only screen and (max-width: 20em) {
   .logo-img {
     width: 8rem;
+    height: 8rem;
     margin-top: 0rem;
   }
   .container {
@@ -152,10 +162,14 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 20em) {
+/* switch this media query to dark mode later */
+@media (prefers-color-scheme: dark) {
   /* My CSS */
   body {
     background-color: #141414;
+  }
+  .logo-img {
+    background-image: url(images/memory-logo.png);
   }
   .container div {
     border: 0.5rem solid #141414;
@@ -166,6 +180,7 @@ button:hover {
   }
   .buttons .start {
     background-color: #f3f3f3;
+    color: #141414;
   }
   .buttons label {
     color: #f3f3f3;
@@ -173,5 +188,9 @@ button:hover {
   .buttons select {
     background-color: #0275d8;
     color: #f3f3f3;
+  }
+  .buttons .confirm {
+    background-color: #f3f3f3;
+    color: #141414;
   }
 }
