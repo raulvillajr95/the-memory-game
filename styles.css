@@ -1,22 +1,25 @@
+:root {
+  --almost-white: #f3f3f3;
+  --almost-black: #141414;
+}
+
 /* My CSS */
-.buttons, .container {
-  width: 30rem;
-}
-.buttons, .container, body {
-  display: flex;
-}
+.buttons,
+.container {width: 30rem}
+.buttons,
+.container, 
+body {display: flex}
 body {
   justify-content: center;
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background-color: #f3f3f3;
+  background-color: var(--almost-white);
   font-family: Arial, Helvetica, sans-serif;
 }
 .logo-img {
   width: 21rem;
   height: 21rem;
-
   background-image: url(images/847C0F61-61EF-4BEE-BD42-21B47F854D35.PNG);
   background-size: cover;
   background-position: center;
@@ -29,7 +32,7 @@ body {
 .container div {
   height: 7rem;
   width: 7rem;
-  border: 0.5rem solid #f3f3f3;
+  border: 0.5rem solid var(--almost-white);
   box-sizing: border-box;
   background-color: #d3d3d3;
   border-radius: 1rem;
@@ -50,24 +53,20 @@ body {
   align-items: center;
   width: 21rem;
 }
-button:hover {
-  cursor: pointer;
-}
+button:hover {cursor: pointer}
 .buttons .start {
-  background-color: #141414;
-  color: #f3f3f3;
+  background-color: var(--almost-black);
+  color: var(--almost-white);
 }
-.buttons label {
-  color: #141414;
-}
+.buttons label {color: var(--almost-black)}
 .buttons select {
   background-color: #0275d8;
-  color: #f3f3f3;
+  color: var(--almost-white);
 }
 .buttons .confirm {
   border-style: none;
-  background-color: #141414;
-  color: #f3f3f3;
+  background-color: var(--almost-black);
+  color: var(--almost-white);
 }
 .doodledee-logo {
   width: 3rem;
@@ -89,20 +88,14 @@ button:hover {
     height: 10rem;
     width: 10rem;
   }
-  .buttons {
-    width: 25rem;
-  }
+  .buttons {width: 25rem}
   .buttons .start, .buttons select, .buttons .confirm {
     border-radius: 0.35rem;
     width: 6rem;
     height: 2rem;
   }
-  .buttons select {
-    text-align: center;
-  }
-  .doodledee-logo {
-    margin-top: 5rem;
-  }
+  .buttons select {text-align: center}
+  .doodledee-logo {margin-top: 5rem}
 }
 
 /* Mobile */
@@ -123,13 +116,13 @@ button:hover {
   .buttons {
     width: 21rem;
   }
-  .buttons .start, .buttons select, .buttons .confirm {
+  .buttons .start,
+  .buttons select,
+  .buttons .confirm {
     width: 5rem;
     border-radius: 0.25rem;
   }
-  .doodledee-logo {
-    margin-top: 3rem;
-  }
+  .doodledee-logo {margin-top: 3rem}
 }
 
 /* Small Mobile */
@@ -152,45 +145,37 @@ button:hover {
     margin-top: 0rem;
     height: 3.5rem;
   }
-  .buttons .start, .buttons select, .buttons .confirm {
+  .buttons .start,
+  .buttons select,
+  .buttons .confirm {
     font-size: 0.6rem;
     width: 3.2rem;
     height: 1.75rem;
   }
-  .doodledee-logo {
-    margin-top: 0rem;
-  }
+  .doodledee-logo {margin-top: 0rem}
 }
 
 /* switch this media query to dark mode later */
 @media (prefers-color-scheme: dark) {
   /* My CSS */
-  body {
-    background-color: #141414;
-  }
-  .logo-img {
-    background-image: url(images/memory-logo.png);
-  }
+  body {background-color: var(--almost-black)}
+  .logo-img {background-image: url(images/memory-logo.png)}
   .container div {
-    border: 0.5rem solid #141414;
+    border: 0.5rem solid var(--almost-black);
     background-color: #d3d3d3;
   }
-  .container div:active {
-    background: rgba(0, 0, 0, 0.5);
-  }
+  .container div:active {background: rgba(0, 0, 0, 0.5)}
   .buttons .start {
-    background-color: #f3f3f3;
-    color: #141414;
+    background-color: var(--almost-white);
+    color: var(--almost-black);
   }
-  .buttons label {
-    color: #f3f3f3;
-  }
+  .buttons label {color: var(--almost-white)}
   .buttons select {
     background-color: #0275d8;
-    color: #f3f3f3;
+    color: var(--almost-white);
   }
   .buttons .confirm {
-    background-color: #f3f3f3;
-    color: #141414;
+    background-color: var(--almost-white);
+    color: var(--almost-black);
   }
 }
