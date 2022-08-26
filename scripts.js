@@ -21,9 +21,12 @@ let difficultyLevel = "easy",
   started = !1,
   baseColor = "lightgrey",
   randomSpace;
+
+// Pick random number
 function pickNumber() {
   randomSpace = spaces[randomNum(6) - 1];
 }
+
 function singularTile(a) {
   pickNumber(),
     randomSpace.style.backgroundColor = "#f0ad4e"
@@ -36,12 +39,14 @@ function singularTile(a) {
       flipSound.currentTime = 0;
     }, a);
 }
+
 let hitList = [];
 function changeColor(a) {
   document.querySelectorAll(".container div").forEach((b) => {
     b.style.backgroundColor = a;
   });
 }
+
 startBtn.addEventListener("click", () => {
   if (((started = !0), (hitList = []), (tapList = []), "easy" == difficultyLevel)) singularTile(750);
   else if ("medium" == difficultyLevel) {
@@ -67,6 +72,7 @@ startBtn.addEventListener("click", () => {
       }, 4 * a + 30);
   }
 });
+
 let tapList = [];
 for (let i = 0; i < spaces.length; i++)
   spaces[i].addEventListener("click", () => {
@@ -106,6 +112,7 @@ for (let i = 0; i < spaces.length; i++)
           (started = !1));
     }
   });
+
 const difficulty = document.getElementById("difficulty"),
   confirm = document.querySelector(".confirm");
 confirm.addEventListener("click", () => {

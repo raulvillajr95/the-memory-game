@@ -89,7 +89,9 @@ button:hover {cursor: pointer}
     width: 10rem;
   }
   .buttons {width: 25rem}
-  .buttons .start, .buttons select, .buttons .confirm {
+  .buttons .start,
+  .buttons select,
+  .buttons .confirm {
     border-radius: 0.35rem;
     width: 6rem;
     height: 2rem;
@@ -113,9 +115,7 @@ button:hover {cursor: pointer}
     width: 7rem;
     border-radius: 1rem;
   }
-  .buttons {
-    width: 21rem;
-  }
+  .buttons {width: 21rem}
   .buttons .start,
   .buttons select,
   .buttons .confirm {
